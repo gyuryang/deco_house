@@ -1,0 +1,159 @@
+*{margin:0; padding: 0; box-sizing: border-box; font-family: sans-serif; -webkit-user-drag:none; user-select: none;}
+a{text-decoration: none; display: block; width: 100%; height: 100%; cursor: pointer; color:#333;}
+li{list-style: none;}
+textarea{resize:none;}
+button{font-weight: bold; background: #1196dd; color:#fff; border:none; border-radius: 5px; position: relative; overflow: hidden; cursor: pointer;}
+button p{position: relative; z-index: 1;}
+button::before{content:''; position: absolute; left:0; top:0; right:0; bottom: 0; clip-path: polygon(100% 0,100% 100%,0 100%); background: #333; opacity: 0.1;}
+.title{height: 250px; padding-top: 130px; position: relative; margin:0 auto;}
+.title h2{font-size: 40px; position: relative;}
+.title p{font-size:60px; position: absolute; bottom: 0; left:50%; transform: translateX(-50%); color:#1196dd; opacity: 0.1; font-weight: bold;}
+.title h2 .goad{width: 80px; height: 2px; position: absolute; top:50%; background: #1196dd;}
+.title h2 .goad:nth-child(1){left:-140px;}
+.title h2 .goad:nth-child(2){right:-140px;}
+.title h2 .goad span{width: 12px; height: 12px; border-radius: 100%; background: #1196dd; position: absolute; top:-4px;}
+.title h2 .goad:nth-child(1) span{left:0;}
+.title h2 .goad:nth-child(2) span{right:0;}
+/*#3d5a98*/
+/*#cf3b3e*/
+/*#45b0df*/
+/*#9246ff*/
+header{width: 1300px; height: 100px; margin:0 auto; display: flex; justify-content: space-between;}
+header .logo{width: 200px; height: 100px;}
+header .logo img{width: 100%; height: 100%; object-fit: cover;}
+header .menu{margin-top:30px;}
+header ul{width: 680px; line-height: 70px; text-align: center; float:left;}
+header ul li{width: 120px; height: 70px; float:left; font-weight: bold; border-top-right-radius: 5px; border-top-left-radius: 5px; transition: 0.5s;}
+header ul li a::after{content:''; width: 0; height: 5px; margin: -5px auto; background: #1196dd; transition: 0.5s; display: block;}
+header ul li:hover{background: #999;}
+header ul li:hover a{color:#fff;}
+header ul li:hover a::after{width: 100%;}
+header button{margin-top:17px; width: 80px; margin-left:10px; height: 35px; float:left; font-size:16px;}
+
+.visual{width: 1600px; height: 700px; margin:0 auto;}
+.visual img{width: 100%; height: 100%; object-fit: cover;}
+
+.house{width: 1100px; height: auto; min-height: 900px; margin:0 auto;}
+.house .title{width: 255px;}
+.house .flex{width: 1100px; height: auto; display: flex; justify-content: space-between; margin-top:80px;}
+.house .box{width: 300px; height: 400px; box-shadow: 1px 1px 9px #e2e2e2;}
+.house .hidden{width: 300px; height: 170px; overflow: hidden; position: relative;}
+.house .hidden img{width: 100%; height: 100%; object-fit: cover; transition: 0.5s}
+.house .hidden img:nth-child(2){position: absolute; right:-300px; top:0;}
+.house .hidden:hover img:nth-child(2){right:0;}
+.house .txtbox{padding: 10px;}
+.house .txtbox img{width: 50px; height: 50px; border-radius: 100%; object-fit: cover; float:left}
+.house .box .txtbox .gray{color:#545454; height: 20px; line-height: 20px; }
+.house .box .txtbox .gray span:nth-child(2){margin-left:15px;}
+.house .txtbox .line{float:left; width: 230px; height: 30px; color:#ff9f00; padding-left: 10px; line-height: 30px;}
+.house .txtbox .con{color:#545454; margin-top:10px; float:left;}
+.house .txtbox button{width: 100px; height: 27px; line-height: 27px; margin-top: 30px; float:right;}
+
+.specialist{width: 1600px; min-height: 1000px; height:auto; background: #f7f7f7; margin:0 auto; font-weight: bold; text-align: center;}
+.specialist .title h2{letter-spacing: 8px;}
+.specialist .title{width: 190px;}
+.specialist .wrap{width: 1100px; height: 550px; margin:0 auto; margin-top:80px;}
+.specialist .box{width: 275px; height: 550px; float:left; position: relative;}
+.specialist .box *{backface-visibility: hidden;}
+.specialist .box>.txtbox{width: 275px; height: 275px; position: relative; float:left; box-shadow: 1px 1px 6px #e2e2e2;}
+.specialist .box:nth-child(even)>.txtbox{position: absolute; bottom: 0}
+.specialist .box:nth-child(odd) .imgbox{position: absolute; bottom: 0}
+.specialist .box .imgbox>.txtbox{width: 275px; height: 275px; position: absolute; left:0; top:0; background: #555; transform: perspective(600px) rotateY(-180deg); float:left; transition: 0.5s}
+.specialist .box .imgbox>.txtbox .con{color:#f9f9e9;}
+.specialist .imgbox{width: 275px; height: 275px; position: relative; float:left;}
+.specialist .imgbox:hover img{transform: perspective(600px) rotateY(180deg);}
+.specialist .imgbox:hover .txtbox{transform: perspective(600px) rotateY(0deg);}
+.specialist img{width: 100%; height: 100%; object-fit: cover; position: relative; z-index: 10; transform: perspective(600px) rotateY(0deg); float:left; transition: 0.5s}
+.specialist .spec_id{color:#ff9f00; margin-top:50px;}
+.specialist .con{color:#555; margin-top:15px;}
+.specialist button{width: 100px; height: 27px; margin-top:30px; line-height: 27px}
+.specialist .box:nth-child(odd)>.txtbox .play{color:#666; position: absolute; bottom: -14px; left:calc(50% - 8px); transform: translateY(-50%) rotate(90deg);}
+.specialist .box:nth-child(even)>.txtbox .play{color:#666; position: absolute; top:8px; left:calc(50% - 8px); transform: translateY(-50%) rotate(-90deg);}
+
+.review{width: 1100px; margin:0 auto; min-height: 1050px; height: auto; color:#333;}
+.review .title{width: 310px; margin-bottom: 40px;}
+.review .box{width: 1100px; height: 200px; border-bottom: dotted 1px #545454; display: flex; justify-content: space-between; padding-top: 40px;}
+.review .box .left{width: 200px; height: 120px; position: relative;}
+.review .box .left .day{font-size:60px; color:#1196dd; line-height: 50px;}
+.review .box .left .month{color:#888; margin-left:10px;}
+.review .box .left .spec_id{color:#888; font-weight: bold; margin-top:10px;}
+.review .box .center{width: 600px; height: 120px; position: relative;}
+.review .box  button{ width: 60px; height: 22px; line-height: 22px; margin-left:10px; position: absolute; top:50%; transform: translateY(-50%);} 
+.review .box .center .fa-plus-circle{float:right; font-size:22px; cursor: pointer;}
+.review .box .center h4{font-size:20px; position: relative;}
+.review .box .center .infor{margin-top:5px; font-size:14px;}
+.review .box .center .fa-money{margin-left:10px;}
+.review .box .center .fa-star{margin-left:10px; color:#1196dd;}
+.review .box .center span{margin-left:2px;}
+.review .box .center .con{line-height: 24px; bottom: 0; position: absolute;}
+.review .box .right{width: 200px; height: 120px; position: relative;}
+.review .box .right img{width: 100%; height: 100%; object-fit: cover;}
+.review .box .right i{font-size:24px; position: absolute; top:50%; left:50%; transform: translateY(-50%) translateX(-50%); color: black; cursor: pointer; transition: 0.5s}
+.review .box .right i:hover{color: white;}
+
+footer{width: 1600px; background: #9a9a9a; height: 200px; margin:0 auto; color:#f9f9f9;}
+footer .flex{width: 1100px; padding: 30px; height: 120px; display: flex; justify-content: space-between; border-bottom: 1px solid #f9f9f9; margin:0 auto;}
+footer .flex .sns{width: 180px; height: 30px; display: flex; justify-content: space-between; margin-top:30px;}
+footer .flex .sns div{width: 30px; height: 30px; border-radius: 100%; float:left; text-align: center; line-height: 30px;}
+footer .facebook{background: #3d5a98}
+footer .youtube{background: #cf3b3e}
+footer .twitter{background: #45b0df}
+footer .twitch{background: #9246ff}
+footer .copyright{width: 1100px; height: 80px; margin:0 auto; padding: 30px; text-align:right;}
+
+@media all and(max-width: 480px){
+
+}
+
+.store{width: 1600px; min-height: 950px; height: auto; margin:0 auto;}
+.store .left{width: auto; height: auto; float:left; }
+.store .search{width: 280px; height: 40px; margin:30px auto;}
+.store .search input{width: 200px; height: 40px;}
+.store .search button{width: 60px; height: 40px; margin-left:20px;}
+.store .drop{width: 450px; height: 300px; margin:0 auto; border:solid 3px #1196dd; text-align: center; font-weight: bold; line-height: 300px;}
+.store .cart{width: 450px; height: auto; min-height: 400px; border:solid 3px #1196dd; margin:10px auto; text-align: center; position: relative;}
+.store .cart ul{display: flex; justify-content: space-between;}
+.store .cart img{width: 45px; height: 45px;}
+.store .cart .image{width: 50px;}
+.store .cart li p{height: 50px; line-height: 50px;}
+.store .cart button{width: 35px; height: 25px;}
+.store .cart input{width: 40px;}
+.store .cart .cart_foot{position: absolute; bottom: 0;  width: 100%}
+.store .cart .cart_foot>p:nth-child(1){float:left;}
+.store .cart .cart_foot button{float:right; width: 70px; text-align: center;}
+
+.store .all{width: 1000px; float:right; height: auto; display: grid; grid-template-columns: repeat(3,3fr);}
+.store .all .item{width: 300px; height: 350px; padding: 30px; margin:0 auto; position: relative;}
+.store .all .item	img{width: 240px; height: 240px; object-fit: cover; border:1px solid #888}
+.store .all .item .txtbox{position: absolute; bottom: 0;}
+.store .all .item .product_name{color:#666; font-size:14px; font-weight: bold;}
+.store .all .item .brand{font-weight: bold; font-size:20px;}
+.store .all .item .price{color:red; font-weight: bold;}
+
+.c{color:white; background: #1196dd}
+
+.popup_wrap{width: 100%; height: 100%; position: fixed; background: rgba(0,0,0,0.6); z-index: 10000; display: none;}
+.popup{min-width: 23%; width: auto; height: auto; min-height: 20%; position: fixed; left:50%; top:50%; background: white; transform: translateX(-50%) translateY(-50%); border-radius: 5px;}
+.popup .Xbtn{position: absolute; width: 40px; height: 40px; background: #1196dd; font-size:24px; line-height: 40px; text-align: center; color:white; border-radius: 5px; margin:10px; top:0; right:0; cursor: pointer;}
+.popup .firstp{padding-top:50px;}
+.popup input[type=file]{width: 147px}
+.popup .answer{width: 50%; height: 70px; margin:20px auto; background: #1196dd} 
+.popup .answer img{width: 100%; height: 100%;}
+.popup input[name=captcha]{display: block; margin:0 auto;}
+.popup>p{display: flex; justify-content: space-between; width:70%; margin:5px auto;}
+.popup button{float:right; width: 100px; height: 35px; font-size:22px; margin:20px 10px;}
+.popup textarea{width: 300px; height: 150px; margin:0 auto; display: block;}
+
+.user{float:left; width: auto; height: 35px; margin-top:22px;}
+.logout_btn a{color:white;}
+
+.house .btn_wrap{width: 100%; height: 50px; float:left;}
+.house .btn_wrap button{width: 100px; height: 35px; line-height: 35px; font-size:20px; float:right;}
+
+.house .grid{width: 1100px; height: auto; display: grid; grid-template-columns: repeat(3, 3fr);}
+.house .grid .grid_item{width: 350px; height: 500px;}
+.house .grid .top{width: 175px; text-align: center; line-height: 50px; height: 50px; float:left;}
+.house .grid textarea{width: 300px; height: 150px; margin:0 auto; display: block; }
+.house .grid img{width: 175px; height: 200px; float:left; object-fit: cover; }
+.house .grid .infor{display: flex; justify-content: space-between;}
+.house .grid button{width: 100%; height: 35px; font-size:20px;}
